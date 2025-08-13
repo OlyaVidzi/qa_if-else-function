@@ -22,7 +22,9 @@ describe('ifElse', () => {
 
     ifElse(mockCondition, mockFirst, mockSecond);
 
-    expect(mockFirst).toHaveBeenCalled();
+    expect(mockCondition).toHaveBeenCalledTimes(1);
+    expect(mockCondition).toHaveBeenCalledWith();
+    expect(mockFirst).toHaveBeenCalledWith();
     expect(mockSecond).not.toHaveBeenCalled();
   });
 
@@ -31,7 +33,9 @@ describe('ifElse', () => {
 
     ifElse(mockCondition, mockFirst, mockSecond);
 
-    expect(mockSecond).toHaveBeenCalled();
+    expect(mockCondition).toHaveBeenCalledTimes(1);
+    expect(mockCondition).toHaveBeenCalledWith();
+    expect(mockSecond).toHaveBeenCalledWith();
     expect(mockFirst).not.toHaveBeenCalled();
   });
 

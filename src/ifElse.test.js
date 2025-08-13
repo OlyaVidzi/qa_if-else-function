@@ -2,6 +2,7 @@
 
 describe('ifElse', () => {
   const { ifElse } = require('./ifElse');
+
   let mockCondition;
   let mockFirst;
   let mockSecond;
